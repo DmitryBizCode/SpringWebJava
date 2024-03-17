@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="${newName}"></h1> <!-- Use "newName" instead of "name" -->
+<form method="get" action="/">
+    <input type="text" name="name">
+    <button type="submit">Press me</button>
+</form>
+</body>
+</html>
+
