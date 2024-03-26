@@ -5,11 +5,25 @@
     <title>Title</title>
 </head>
 <body>
-<h1 th:text="${newName}"></h1> <!-- Use "newName" instead of "name" -->
-<form method="get" action="/">
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="person: ${personList}">
+        <td th:text="${person.name}"/>
+        <td th:text="${person.surname}"/>
+    </tr>
+    </tbody>
+</table>
+<form method="post" action="/">
+    <label>Add new person: </label>
     <input type="text" name="name">
-    <button type="submit">Press me</button>
+    <input type="text" name="surname">
+    <button type="submit">Save</button>
 </form>
 </body>
 </html>
-
